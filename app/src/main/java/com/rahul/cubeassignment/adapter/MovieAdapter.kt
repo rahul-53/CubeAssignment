@@ -27,6 +27,7 @@ class MovieAdapter(private val context: Context, private val movieList:List<Resu
             tvMovieName.text = movieResponseItem.title
             releaseDate.text = movieResponseItem.release_date
             tvPopularity.text =movieResponseItem.popularity.toString()
+            rating.text = movieResponseItem.vote_average.toString()
             Glide.with(context).load("https://image.tmdb.org/t/p/original"+movieResponseItem.poster_path).into(posterImg)
         }
     }
